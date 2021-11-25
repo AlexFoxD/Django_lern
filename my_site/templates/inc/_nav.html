@@ -10,7 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'main'%}">Главная</a></li>
+                {% if request.user.is_authenticated %}
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'add_news'%}">Добавить новость</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/admin">Админка</a></li>
+                {% endif %}
             </ul>
         </div>
     </div>

@@ -16,11 +16,11 @@
 
         <div class="media">
             {% if item.photo %}
-            <img src="{{ item.photo.url }}" alt="photo" width="350" class="mr-3">
+            <img src="{{ item.photo.url }}" align="left" style="padding-right: 6px;" width="350" class="mr-3">
             {% endif %}
 
             <div class="media-body">
-                <h5 class="card-title {% cycle 'text-danger' 'text-success' %}">{{ item.title }}</h5>
+                <h5 class="card-title">{{ item.title }}</h5>
                 <p class="card-text">{{ item.content|linebreaks|truncatewords:80 }}</p>
                 <a href="{{ item.get_absolute_url }}" class="btn btn-primary">Read more...</a>
             </div>

@@ -23,7 +23,8 @@ class News(models.Model):
         ordering = ['-created_at']
 
     def get_absolute_url(self):
-        return reverse('view_news', kwargs={"news_id": self.pk})
+        return reverse('view_news', kwargs={"pk": self.pk})
+
 
 
 class Category(models.Model):
